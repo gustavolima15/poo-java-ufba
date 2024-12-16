@@ -2,6 +2,7 @@ package com.gestaoescolar.model;
 
 import com.gestaoescolar.avaliacao.Avaliacao;
 
+// Herança: Extende Disciplina e adiciona atributos específicos como pré-requisitos
 public class DisciplinaOptativa extends Disciplina {
     private String prerequisitos; 
 

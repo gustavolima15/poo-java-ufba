@@ -3,6 +3,7 @@ package com.gestaoescolar.model;
 import java.util.List;
 import java.util.ArrayList;
 
+// Composição: Associa alunos, professores e disciplinas
 public class Turma {
     private Disciplina disciplina;
     private Professor professor;

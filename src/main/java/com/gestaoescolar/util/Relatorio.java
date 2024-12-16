@@ -14,6 +14,7 @@ public class Relatorio<T> {
 
     public void gerarRelatorio() {
         for (T item : itens) {
+            // Polimorfismo: A lógica varia com o tipo do item
             if (item instanceof Disciplina) {
                 System.out.println("Relatório da Disciplina:");
                 ((Disciplina) item).exibirInformacoes();

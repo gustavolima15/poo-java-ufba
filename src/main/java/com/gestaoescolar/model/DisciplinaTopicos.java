@@ -2,6 +2,7 @@ package com.gestaoescolar.model;
 
 import com.gestaoescolar.avaliacao.Avaliacao;
 
+// Herança: Extende Disciplina
 public class DisciplinaTopicos extends Disciplina {
     private String ementaProfessor;
 

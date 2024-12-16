@@ -2,6 +2,7 @@ package com.gestaoescolar.model;
 
 import com.gestaoescolar.avaliacao.Avaliacao;
 
+// Herança: Extende Disciplina e aproveita sua estrutura base
 public class DisciplinaObrigatoria extends Disciplina {
 
     public DisciplinaObrigatoria(String nome, String codigo, String ementa, Avaliacao avaliacao) {

@@ -1,5 +1,7 @@
 package com.gestaoescolar.avaliacao;
 
+// Implementação de Avaliação para Provas
+// Polimorfismo: Sobrescreve o método calcularNota de forma específica
 public class AvaliacaoProva implements Avaliacao {
     @Override
     public double calcularNota(double[] notas) {

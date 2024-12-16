@@ -11,6 +11,7 @@ public class Professor {
         this.area = area;
     }
 
+    // Encapsulamento: Getter para o nome
     public String getNome() {
         return nome;
     }
@@ -18,11 +19,12 @@ public class Professor {
     public String getArea() {
         return area;
     }
-
+    // Composição: Adiciona uma turma ao professor
     public void adicionarTurma(Turma turma) {
         turmas.add(turma);
     }
 
+    // Encapsulamento: Retorna a lista de turmas do professor
     public List<Turma> getTurmas() {
         return turmas;
     }
