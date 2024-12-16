@@ -1,33 +1,38 @@
 package com.gestaoescolar.model;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.ArrayList;
 
 public class Turma {
     private Disciplina disciplina;
     private Professor professor;
     private List<Aluno> alunos;
 
-    public Turma(Disciplina disciplina, Professor professor, List<Aluno> alunos) {
+    public Turma(Disciplina disciplina, Professor professor) {
         this.disciplina = disciplina;
         this.professor = professor;
         this.alunos = new ArrayList<>();
     }
 
-    public void adicionarAProfessor(Professor professor) {
-        this.professor = professor;
-    }  
+    public Disciplina getDisciplina() {
+        return disciplina;
+    }
 
-    public void adicionarAluno(List<Aluno> alunos) {
-        alunos.addAll(alunos);
+    public Professor getProfessor() {
+        return professor;
+    }
+
+    public void adicionarAluno(Aluno aluno) {
+        this.alunos.add(aluno);
+        aluno.matricularNaTurma(this);
     }
 
     public void exibirInformacoes() {
-        System.out.println("Disciplina: " + disciplina.getNome());
+        System.out.println("Turma de " + disciplina.getNome() + " (Código: " + disciplina.getCodigo() + ")");
         System.out.println("Professor: " + professor.getNome());
-        System.out.println("Alunos: ");
+        System.out.println("Alunos inscritos: " + alunos.size());
         for (Aluno aluno : alunos) {
-            System.out.println(aluno.getNome());
+            System.out.println("Aluno: " + aluno.getNome());
         }
     }
 }

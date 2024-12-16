@@ -1,25 +1,24 @@
 package com.gestaoescolar.model;
 
-import java.util.List;
+import com.gestaoescolar.avaliacao.Avaliacao;
 
-public class DisciplinaOptativa extends Disciplina{
-    private List<String> preRequisitos;
+public class DisciplinaOptativa extends Disciplina {
+    private String prerequisitos; 
 
-    public DisciplinaOptativa(String nome, String ementa, String codigo, List<String> preRequisitos) {
-        super(nome, ementa, codigo);
-        this.preRequisitos = preRequisitos;
+    public DisciplinaOptativa(String nome, String codigo, String ementa, String prerequisitos, Avaliacao avaliacao) {
+        super(nome, codigo, ementa, avaliacao);
+        this.prerequisitos = prerequisitos;
+    }
+
+    public String getPrerequisitos() {
+        return prerequisitos;
     }
 
     @Override
-
     public void exibirInformacoes() {
-        System.out.println("Disciplina: " + getNome());
-        System.out.println("Ementa: " + getEmenta());
+        System.out.println("Disciplina Optativa: " + getNome());
         System.out.println("Código: " + getCodigo());
-        System.out.println("Pré-requisitos: ");
-        for (String preRequisito : preRequisitos) {
-            System.out.println(preRequisito);
-        }
-    }
-    
+        System.out.println("Ementa: " + getEmenta());
+        System.out.println("Pré-requisitos: " + getPrerequisitos());
+}
 }

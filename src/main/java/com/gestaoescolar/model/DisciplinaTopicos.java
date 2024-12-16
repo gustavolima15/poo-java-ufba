@@ -1,17 +1,19 @@
 package com.gestaoescolar.model;
 
-import java.util.List;
+import com.gestaoescolar.avaliacao.Avaliacao;
 
-public class DisciplinaTopicos extends DisciplinaOptativa {
+public class DisciplinaTopicos extends Disciplina {
+    private String ementaProfessor;
 
-
-    public DisciplinaTopicos(String nome, String ementa, String codigo, List<String> prerequisitos) {
-        super(nome, ementa, codigo, prerequisitos);
+    public DisciplinaTopicos(String nome, String codigo, String ementaProfessor, Avaliacao avaliacao) {
+        super(nome, codigo, "", avaliacao);
+        this.ementaProfessor = ementaProfessor;
     }
 
     @Override
     public void exibirInformacoes() {
-        System.out.println("Disciplina de Tópicos: " + getNome() + " - " + getCodigo());
-        System.out.println("Ementa: Definida pelo professor.");
+        System.out.println("Disciplina de Tópicos: " + getNome());
+        System.out.println("Código: " + getCodigo());
+        System.out.println("Ementa: " + ementaProfessor);
     }
 }
