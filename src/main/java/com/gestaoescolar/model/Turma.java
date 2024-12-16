@@ -32,8 +32,16 @@ public class Turma {
         System.out.println("Turma de " + disciplina.getNome() + " (Código: " + disciplina.getCodigo() + ")");
         System.out.println("Professor: " + professor.getNome());
         System.out.println("Alunos inscritos: " + alunos.size());
+        
+        // Exibe informações de cada aluno, incluindo as notas
         for (Aluno aluno : alunos) {
-            System.out.println("Aluno: " + aluno.getNome());
+            double[] notas = aluno.getNotasPorDisciplina().get(disciplina);
+            if (notas != null && notas.length > 0) {
+                double notaFinal = aluno.calcularNota(disciplina, notas); // Calculando a nota do aluno para a disciplina
+                System.out.printf("Aluno: %s | Nota: %.2f%n", aluno.getNome(), notaFinal);
+            } else {
+                System.out.println("Aluno: " + aluno.getNome() + " | Nota não atribuída para esta disciplina");
+            }
         }
     }
 }

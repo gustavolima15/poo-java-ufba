@@ -47,6 +47,11 @@ public class App
         turma2.adicionarAluno(aluno2);
         turma3.adicionarAluno(aluno2);
 
+        aluno1.adicionarNotas(disciplina1, 8.0, 7.5); // João tem notas para Matemática
+        aluno2.adicionarNotas(disciplina2, 7.0, 9.0); // Maria tem notas para Psicologia
+        aluno2.adicionarNotas(disciplina3, 8.0, 8.5); // Maria tem notas para Tópicos
+
+
         // Gera relatórios usando polimorfismo
         List<Disciplina> disciplinas = Arrays.asList(disciplina1, disciplina2, disciplina3);
         Relatorio<Disciplina> relatorioDisciplinas = new Relatorio<>(disciplinas);
