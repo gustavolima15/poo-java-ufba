@@ -45,11 +45,11 @@ public class App
         turma2.adicionarAluno(aluno2);
         turma3.adicionarAluno(aluno2);
 
-        List<Disciplina> disciplinas = Arrays.asList(disciplina1, disciplina2);
+        List<Disciplina> disciplinas = Arrays.asList(disciplina1, disciplina2, disciplina3);
         Relatorio<Disciplina> relatorioDisciplinas = new Relatorio<>(disciplinas);
         relatorioDisciplinas.gerarRelatorio();
 
-        List<Turma> turmas = Arrays.asList(turma1, turma2);
+        List<Turma> turmas = Arrays.asList(turma1, turma2, turma3);
         Relatorio<Turma> relatorioTurmas = new Relatorio<>(turmas);
         relatorioTurmas.gerarRelatorio();
 
